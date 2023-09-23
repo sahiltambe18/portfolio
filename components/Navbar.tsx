@@ -19,9 +19,8 @@ const Navbar = () => {
                   ${scrolled ? "bg-primary" : "bg-transparent"}`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          href={"/"}
-          className="flex items-center gap-2"
+        <div
+          className="flex items-center gap-2 cursor-pointer"
           onClick={() => {
             setActive("/");
             window.scrollTo({
@@ -35,7 +34,7 @@ const Navbar = () => {
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Sahil
           </p>
-        </Link>
+        </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <Link
