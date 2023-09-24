@@ -1,27 +1,21 @@
-import {
-  About,
-  Tech,
-  Navbar,
-  Hero,
-  Works,
-  Feedbacks,
-  Contact,
-} from "../components";
 
-export default function Home() {
+
+const data = async()=>{
+  const res = await fetch("http://localhost:3000/data/" ,{next:{
+    revalidate:60,
+  }  } )
+  return await res.json()
+}
+
+export default async function Home() {
+  
+  const about = await data()
+
   return (
-    <div className="relative z-0 bg-primary">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <Navbar />
-        <Hero />
-      </div>
-      <About />
-      <Tech />
-      <Works />
-      <Feedbacks />
-      <div className="relative z-0">
-        <Contact />
-      </div>
+    <div >
+      <p>
+        {about}
+      </p>
     </div>
   );
 }
