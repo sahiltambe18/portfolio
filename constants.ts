@@ -34,12 +34,12 @@ const domains :domain[] = [
     },
     {
         title:"Machine Learning",
-        data:"I'm currently learning and understanding machine learning",
+        data:"I'm currently learning and understanding the concepts machine learning",
         icon:FaBrain
     },
     {
         title:"Gymming",
-        data:"I have habit to keep myself fit",
+        data:"I have habit to keep me fit",
         icon:GiBiceps
     },
     {
