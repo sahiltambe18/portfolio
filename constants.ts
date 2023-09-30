@@ -49,8 +49,21 @@ const domains :domain[] = [
     },
 ]
 
+interface skill {
+    name: string,
+    level:string,
+    icon:IconType
+}
+
+const skills : skill[] = [
+    {
+        name:"ReactJs",
+        level:"90%",
+        icon:
+    }
+]
 const data = `I am an IT engineering student at International Institute of Information Technology, Pune with an insatiable curiosity for software and technology. 
 My strengths lie in problem-solving and optimization, skills I've honed while delving into C++.
 My journey has led me to the captivating realm of machine learning, where I'm actively acquiring skills and exploring its applications. Eager to contribute and grow in the tech world` 
 
-export {links ,domains , data}
+export {links ,domains , data , skills}
