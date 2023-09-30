@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-r p-4 pt-10 from-pink-400 to-violet-600 grid sm:grid-cols-12 gap-6">
+      <body className="bg-gradient-to-r p-4 pt-10 font-mono from-pink-400 to-violet-600 grid sm:grid-cols-12 gap-6">
         <Sidebar />
-        <div className="bg-white text-black p-4 sm:col-span-9 rounded-lg">
+        <div className="bg-white text-black sm:col-span-9 rounded-lg">
           <Navbar />
           {children}
           </div>
