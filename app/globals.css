@@ -14,3 +14,27 @@
 .links{
   @apply w-16 text-2xl sm:text-3xl
 }
+
+.dbtn{
+  @apply dark:from-pink-600 dark:to-violet-800
+}
+
+.dark-bg{
+  @apply dark:bg-slate-700  dark:bg-opacity-40 
+}
+
+.light-card{
+  @apply from-slate-300 to-slate-300
+}
+
+.dark-card{
+  @apply dark:from-slate-600 dark:to-slate-600
+}
+
+.light-bar{
+  @apply from-green-400 to-blue-500
+}
+
+.dark-bar{
+  @apply dark:from-pink-400 dark:to-violet-600
+}

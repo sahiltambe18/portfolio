@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 
 const Provider = ({children}:{children:ReactNode}) => {
   return (
-    <ThemeProvider  enableSystem={true}  attribute='class'  >
+    <ThemeProvider   attribute='class'  >
         {children}
     </ThemeProvider>
   )

@@ -22,7 +22,7 @@ const Sidebar = () => {
   
 
   return (
-    <div className="p-7 dark:bg-black  bg-white sm:col-span-3 flex flex-col  justify-center items-center rounded-xl">
+    <div className={`p-7 dark-bg bg-white sm:col-span-3 flex flex-col  justify-center items-center rounded-xl`}>
       <button
         onClick={() => {
           setTheme(resolvedTheme === "light" ? "dark" : "light");
@@ -38,13 +38,11 @@ const Sidebar = () => {
       />
 
       <h1 className="text-3xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
-      <h2 className="btn">Web Developer</h2>
-      <a href="#" className="flex items-center btn ">
-        
+      <h2 className="btn dbtn">Web Developer</h2>
+      <a href="#" className="flex items-center btn dbtn ">
         <RiPagesLine className="w-18 mr-2" /> Resume
       </a>
-      <h2 className="btn  flex items-center gap-2">
-        
+      <h2 className=" btn dbtn  flex items-center gap-2">
         <GrMail className="w-18" /> Contact me :)
       </h2>
       <div className="flex gap-12">

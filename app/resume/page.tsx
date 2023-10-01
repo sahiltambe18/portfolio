@@ -2,8 +2,8 @@ import Bar from "@/components/Bar"
 import { skills } from '../../constants'
 const Page = () => {
   return (
-    <div className="p-4 text-[#354358]">
-      <div className="text-xl bg-slate-300 rounded-xl p-3 sm:w-2/3" >
+    <div className="p-4 dark:text-white text-[#354358]">
+      <div className="text-xl bg-gradient-to-r light-card dark-card rounded-xl p-3 sm:w-2/3" >
         <h1 className=" font-semibold" >Education</h1>
         <div className="">
           <h2>B.E. Information Technology</h2>
@@ -13,8 +13,8 @@ const Page = () => {
         </div>
       </div>
       <div>
-        <h1>Skills</h1>
-        <div className="flex flex-col gap-2">
+        <h1 className="my-4 px-2 text-lg font-semibold">Skills</h1>
+        <div className="flex flex-col gap-3">
           {skills.map( item => (
             <Bar skill={item} />
           ))}
