@@ -1,8 +1,10 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import Profile from "../public/pr_lg.jpg";
 import { GrMail } from "react-icons/gr";
 import { RiPagesLine } from "react-icons/ri";
+import { useTheme } from 'next-themes'
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 
 const Sidebar = () => {
