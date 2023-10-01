@@ -1,31 +1,51 @@
-'use client'
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Profile from "../public/pr_lg.jpg";
 import { GrMail } from "react-icons/gr";
 import { RiPagesLine } from "react-icons/ri";
-import { useTheme } from 'next-themes'
+import { useTheme } from "next-themes";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 
 const Sidebar = () => {
+  const { setTheme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   
+
   return (
-    <div className="p-7  bg-white sm:col-span-3 flex flex-col  justify-center items-center rounded-xl">
+    <div className="p-7 dark:bg-black  bg-white sm:col-span-3 flex flex-col  justify-center items-center rounded-xl">
+      <button
+        onClick={() => {
+          setTheme(resolvedTheme === "light" ? "dark" : "light");
+        }}
+      >
+        theme
+      </button>
+
       <Image
         src={Profile}
         alt="profile"
         className="rounded-full max-w-[10rem] shadow-xl"
       />
-      
+
       <h1 className="text-3xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
       <h2 className="btn">Web Developer</h2>
       <a href="#" className="flex items-center btn ">
-        {" "}
+        
         <RiPagesLine className="w-18 mr-2" /> Resume
       </a>
       <h2 className="btn  flex items-center gap-2">
-        {" "}
-        <GrMail className="w-18" /> Contact me :){" "}
+        
+        <GrMail className="w-18" /> Contact me :)
       </h2>
       <div className="flex gap-12">
         <a href="#">
