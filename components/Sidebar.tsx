@@ -13,6 +13,7 @@ const Sidebar = () => {
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    setTheme("dark")
     setMounted(true);
   }, []);
 
