@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily:{
-        'Caveat': ['Caveat']
+        'Caveat': ['Caveat'],
+        'Kalam':['Kalam']
       },
     },
   },

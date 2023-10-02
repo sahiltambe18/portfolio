@@ -1,4 +1,4 @@
-'use layout'
+'use client'
 import Bar from "@/components/Bar"
 import { skills } from '../../constants'
 const Page = () => {
@@ -17,7 +17,7 @@ const Page = () => {
         <h1 className="my-4 px-2 text-lg font-semibold">Skills</h1>
         <div className="flex flex-col gap-3">
           {skills.map( item => (
-            <Bar skill={item} />
+            <Bar key={item.name} skill={item} />
           ))}
         </div>
       </div>

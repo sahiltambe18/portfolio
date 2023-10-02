@@ -3,32 +3,39 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Profile from "../public/pr_lg.jpg";
 import { GrMail } from "react-icons/gr";
-import { RiPagesLine } from "react-icons/ri";
 import { useTheme } from "next-themes";
-import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
+import {
+  BsGithub,
+  BsLinkedin,
+  BsInstagram,
+  BsCloudDownload,
+} from "react-icons/bs";
 import Toggle from "./Toggle";
+import Link from "next/link";
 
 const Sidebar = () => {
   const { setTheme, resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    setTheme("dark")
+    setTheme("dark");
     setMounted(true);
   }, []);
 
-  if (!mounted) { return null;  }
-
-  
+  if (!mounted) {
+    return null;
+  }
 
   return (
-    <div className={`p-7 dark-bg bg-white sm:col-span-3 relative flex flex-col duration-700 justify-center items-center rounded-xl`}>
+    <div
+      className={`p-7 dark-bg bg-white sm:col-span-3 relative flex flex-col duration-700 justify-center items-center rounded-xl`}
+    >
       <button
         onClick={() => {
           setTheme(resolvedTheme === "light" ? "dark" : "light");
         }}
       >
-      <Toggle/>
+        <Toggle />
       </button>
 
       <Image
@@ -37,24 +44,29 @@ const Sidebar = () => {
         className="rounded-full max-w-[10rem] shadow-xl"
       />
 
-      <h1 className="text-3xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
+      <h1 className="text-5xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
       <h2 className="btn dbtn">Web Developer</h2>
-      <a href="#" className="flex items-center btn dbtn ">
-        <RiPagesLine className="w-18 mr-2" /> Resume
+      <a href={'web-cv.pdf'} download={'web-cv.pdf'} className="flex items-center btn dbtn ">
+        <BsCloudDownload className="w-18 mr-2" /> Resume
       </a>
-      <h2 className=" btn dbtn  flex items-center gap-2">
-        <GrMail className="w-18" /> Contact me :)
-      </h2>
+      <Link href={'mailto:sahiltambe81922@gmail.com'}>
+        <h2 className=" btn dbtn  flex items-center gap-2">
+          <GrMail className="w-18" /> Contact me :)
+        </h2>
+      </Link>
       <div className="flex gap-12">
-        <a href="#">
+        <Link href="https://github.com/sahiltambe18/" target={"_blank"}>
           <BsGithub className="links" />
-        </a>
-        <a href="#">
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/sahil-tambe-77b181230/"
+          target={"_blank"}
+        >
           <BsLinkedin className="links text-blue-600" />
-        </a>
-        <a href="#">
+        </Link>
+        <Link href="https://instagram.com/sahil_tambe_96k_/" target={"_blank"}>
           <BsInstagram className="links text-red-600" />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export default function Home() {
               className="flex gap-2 p-3 rounded-lg items-center dark:bg-gradient-to-r dbtn shadow-xl border hover:border-slate-700 hover:animate-bounce    bg-slate-100"
               key={item.title}
             >
-              {<item.icon className="text-green-700  text-3xl " />}
+              {<item.icon className="text-green-700 dark:text-sky-600  text-3xl " />}
               <div>
                 <h2 className="font-semibold">{item.title}</h2>
                 <p>{item.data}</p>

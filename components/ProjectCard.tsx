@@ -3,8 +3,8 @@ import { Project } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AiFillGithub, AiFillProject } from "react-icons/ai";
-import { TbMedicalCrossFilled } from "react-icons/tb";
+import { BsGithub, BsRocketTakeoff } from "react-icons/bs";
+
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const [showDetail, setShowDetail] = useState(false);
@@ -35,8 +35,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <p className="text-xs" >{project.description}</p>
       <div className="text-xs flex gap-2" >{project.key_techs.map( tech => <p key={tech}>{tech}</p>)}</div>
       <div className="flex gap-9">
-        <Link href={project.github_url} target={'_blank'} ><button className="btn dbtn" >GitHub</button></Link>
-        {project.deployed_url!=='NA' && <Link href={project.deployed_url} target={"_blank"} ><button className="btn dbtn" >Live</button></Link>}
+        <Link href={project.github_url} className="btn dbtn flex gap-2 items-center" target={'_blank'} ><BsGithub/> Github</Link>
+        {project.deployed_url!=='NA' && <Link href={project.deployed_url} className="btn dbtn flex gap-2 items-center" target={"_blank"} ><BsRocketTakeoff/> Live</Link>}
       </div>
     </div>
   );
