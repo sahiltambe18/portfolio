@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Profile from "../public/pr_lg.jpg";
+import Pr_dark from "../public/pr-d.jpeg";
 import { GrMail } from "react-icons/gr";
 import { useTheme } from "next-themes";
 import {
@@ -38,11 +39,16 @@ const Sidebar = () => {
         <Toggle />
       </button>
 
-      <Image
+      {resolvedTheme==='dark'? <Image
         src={Profile}
         alt="profile"
         className="rounded-full max-w-[10rem] shadow-xl"
-      />
+      />:
+      <Image
+        src={Pr_dark}
+        alt="profile"
+        className="rounded-full max-w-[10rem] shadow-xl"
+      />}
 
       <h1 className="text-5xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
       <h2 className="btn dbtn">Web Developer</h2>
