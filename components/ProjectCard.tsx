@@ -33,6 +33,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         height={150}
       />
       <p className="text-xs" >{project.description}</p>
+      <div className="text-xs flex gap-2" >{project.key_techs.map( tech => <p key={tech}>{tech}</p>)}</div>
       <div className="flex gap-9">
         <Link href={project.github_url} target={'_blank'} ><button className="btn dbtn" >GitHub</button></Link>
         {project.deployed_url!=='NA' && <Link href={project.deployed_url} target={"_blank"} ><button className="btn dbtn" >Live</button></Link>}

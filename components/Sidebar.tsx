@@ -6,6 +6,7 @@ import { GrMail } from "react-icons/gr";
 import { RiPagesLine } from "react-icons/ri";
 import { useTheme } from "next-themes";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
+import Toggle from "./Toggle";
 
 const Sidebar = () => {
   const { setTheme, resolvedTheme } = useTheme();
@@ -20,13 +21,13 @@ const Sidebar = () => {
   
 
   return (
-    <div className={`p-7 dark-bg bg-white sm:col-span-3 flex flex-col duration-700 justify-center items-center rounded-xl`}>
+    <div className={`p-7 dark-bg bg-white sm:col-span-3 relative flex flex-col duration-700 justify-center items-center rounded-xl`}>
       <button
         onClick={() => {
           setTheme(resolvedTheme === "light" ? "dark" : "light");
         }}
       >
-        theme
+      <Toggle/>
       </button>
 
       <Image
