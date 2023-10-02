@@ -138,6 +138,14 @@ const projects : Project[] =[
         image_path:"https://res.cloudinary.com/dx8brgan4/image/upload/v1696184198/google-clone_xlotn8.png"
     },
     {
+        name:'E-commerce-Website',
+        description:"fully SSR E-commerce website",
+        deployed_url:"https://sahil-ecommerce-website.onrender.com/",
+        github_url:"https://github.com/sahiltambe18/ecommerce-website/",
+        key_techs:['ExpressJs','mongoDB','stripe'],
+        image_path:"https://res.cloudinary.com/dx8brgan4/image/upload/v1696263017/ecommerce_xobyjw.png"
+    },
+    {
         name:'React-dashboard',
         description:"react product analysis dashboard ",
         deployed_url:"https://dashboard-ui-sahil.onrender.com/",

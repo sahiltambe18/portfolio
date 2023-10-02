@@ -38,3 +38,7 @@
 .dark-bar{
   @apply dark:from-pink-400 dark:to-violet-600
 }
+
+.lg-pr{
+  @apply from-sky-600 to-violet-500
+}

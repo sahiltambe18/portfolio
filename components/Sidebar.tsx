@@ -15,14 +15,12 @@ const Sidebar = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  if (!mounted) { return null;  }
 
   
 
   return (
-    <div className={`p-7 dark-bg bg-white sm:col-span-3 flex flex-col  justify-center items-center rounded-xl`}>
+    <div className={`p-7 dark-bg bg-white sm:col-span-3 flex flex-col duration-700 justify-center items-center rounded-xl`}>
       <button
         onClick={() => {
           setTheme(resolvedTheme === "light" ? "dark" : "light");

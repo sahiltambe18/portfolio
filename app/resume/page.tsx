@@ -1,3 +1,4 @@
+'use layout'
 import Bar from "@/components/Bar"
 import { skills } from '../../constants'
 const Page = () => {
