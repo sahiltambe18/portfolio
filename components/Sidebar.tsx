@@ -5,6 +5,7 @@ import Profile from "../public/pr_lg.jpg";
 import Pr_dark from "../public/pr-d.jpeg";
 import { GrMail } from "react-icons/gr";
 import { useTheme } from "next-themes";
+import { resumeDoc } from '../constants'
 import {
   BsGithub,
   BsLinkedin,
@@ -52,7 +53,7 @@ const Sidebar = () => {
 
       <h1 className="text-5xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
       <h2 className="btn dbtn">Web Developer</h2>
-      <a href={'web-cv.pdf'} download={'web-cv.pdf'} className="flex items-center btn dbtn ">
+      <a href={resumeDoc} download={'CV-web.pdf'} className="flex items-center btn dbtn ">
         <BsCloudDownload className="w-18 mr-2" /> Resume
       </a>
       <Link href={'mailto:sahiltambe81922@gmail.com'}>
