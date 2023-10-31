@@ -5,7 +5,7 @@ import Profile from "../public/pr_lg.jpg";
 import Pr_dark from "../public/pr-d.jpeg";
 import { GrMail } from "react-icons/gr";
 import { useTheme } from "next-themes";
-import { resumeDoc } from '../constants'
+import { resumeDoc } from "../constants";
 import {
   BsGithub,
   BsLinkedin,
@@ -40,28 +40,35 @@ const Sidebar = () => {
         <Toggle />
       </button>
 
-      {resolvedTheme==='dark'? <Image
-        src={Profile}
-        alt="profile"
-        className="rounded-full max-w-[10rem] shadow-xl"
-      />:
-      <Image
-        src={Pr_dark}
-        alt="profile"
-        className="rounded-full max-w-[10rem] shadow-xl"
-      />}
+      {resolvedTheme === "dark" ? (
+        <Image
+          src={Profile}
+          alt="profile"
+          className="rounded-full max-w-[10rem] shadow-xl"
+        />
+      ) : (
+        <Image
+          src={Pr_dark}
+          alt="profile"
+          className="rounded-full max-w-[10rem] shadow-xl"
+        />
+      )}
 
       <h1 className="text-5xl pt-4 font-semibold font-Caveat pb-10">Sahil</h1>
       <h2 className="btn dbtn">Web Developer</h2>
-      <a href={resumeDoc} download={'CV-web.pdf'} className="flex items-center btn dbtn ">
+      <a
+        href={resumeDoc}
+        download={resumeDoc}
+        className="flex items-center btn dbtn "
+      >
         <BsCloudDownload className="w-18 mr-2" /> Resume
       </a>
-      <Link href={'mailto:sahiltambe81922@gmail.com'}>
+      <Link href={"mailto:sahiltambe81922@gmail.com"}>
         <h2 className=" btn dbtn  flex items-center gap-2">
           <GrMail className="w-18" /> Contact me :)
         </h2>
       </Link>
-      <div className="flex gap-12">
+      <div className="flex justify-between">
         <Link href="https://github.com/sahiltambe18/" target={"_blank"}>
           <BsGithub className="links" />
         </Link>
