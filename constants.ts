@@ -141,7 +141,7 @@ const projects : Project[] =[
         name:'E-commerce-Website',
         description:"fully SSR E-commerce website",
         deployed_url:"https://sahil-ecommerce-website.onrender.com/",
-        github_url:"https://github.com/sahiltambe18/ecommerce-website/",
+        github_url:"https://github.com/sahiltambe18/Ecommers-website",
         key_techs:['ExpressJs','mongoDB','stripe'],
         image_path:"https://res.cloudinary.com/dx8brgan4/image/upload/v1696263017/ecommerce_xobyjw.png"
     },
