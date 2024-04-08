@@ -171,7 +171,7 @@ const projects : Project[] =[
     },
 ]
 
-const resumeDoc = 'https://sahil-static.netlify.app/Images/CV-web.pdf'
+const resumeDoc = 'https://sahil-static.netlify.app/Images/sahil_tambe.pdf'
 
 export { links, domains, data, skills  ,projects , resumeDoc};
 export type { skill  , Project};
