@@ -4,6 +4,10 @@ import { FaServer, FaCode, FaMountain, FaBrain, FaReact, FaNodeJs, FaPython, FaJ
 import { AiFillApi } from 'react-icons/ai';
 import { GiBiceps } from 'react-icons/gi';
 import { TbBrandCpp, TbBrandTailwind, TbBrandNextjs } from 'react-icons/tb';
+import { IoLogoJavascript } from "react-icons/io";
+import { SiExpress , SiScikitlearn , SiTypescript } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+
 
 
 const links = [{ path: '/', title: "About" }, { path: '/resume', title: "Resume" }, { path: '/projects', title: "Projects" }]
@@ -65,18 +69,38 @@ const skills: skill[] = [
         icon: FaReact
     },
     {
+        name: "JavaScript",
+        level: "90%",
+        icon: IoLogoJavascript
+    },
+    {
+        name: "TypeScript",
+        level: "90%",
+        icon: SiTypescript
+    },
+    {
         name: "NodeJS",
-        level: "70%",
+        level: "85%",
         icon: FaNodeJs
     },
     {
+        name: "ExpressJS",
+        level: "85%",
+        icon: SiExpress
+    },
+    {
         name: "Python",
-        level: "70%",
+        level: "80%",
         icon: FaPython
     },
     {
+        name: "Scikit-Learn",
+        level: "70%",
+        icon: SiScikitlearn
+    },
+    {
         name: "JAVA",
-        level: "80%",
+        level: "85%",
         icon: FaJava
     },
     {
@@ -86,18 +110,23 @@ const skills: skill[] = [
     },
     {
         name: "NEXTJS",
-        level: "80%",
+        level: "85%",
         icon: TbBrandNextjs
+    },
+    {
+        name: "Postgresql",
+        level: "75%",
+        icon: BiLogoPostgresql
+    },
+    {
+        name: "MongoDB",
+        level: "80%",
+        icon: FaDatabase
     },
     {
         name: "Tailwind CSS",
         level: "90%",
         icon: TbBrandTailwind
-    },
-    {
-        name: "MongoDB",
-        level: "70%",
-        icon: FaDatabase
     },
     {
         name: "Ubuntu",
@@ -121,6 +150,14 @@ interface Project {
 
 
 const projects : Project[] =[
+    {
+        name:'PDF-Chat Saas',
+        description:"Interactive Discussion with Pdf using Gen-AI , *Under Development",
+        deployed_url:"NA",
+        github_url:"https://github.com/sahiltambe18/pdf-buddy",
+        key_techs:['NextJS',"Google GenAI",'tRPC','Postgresql'],
+        image_path:"https://res.cloudinary.com/dx8brgan4/image/upload/v1717393579/vdkfgsrvihow3b14bd1j.png"
+    },
     {
         name:'video-chat-app',
         description:"one to one video calling website",
