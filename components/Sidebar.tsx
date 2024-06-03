@@ -12,6 +12,7 @@ import {
   BsInstagram,
   BsCloudDownload,
 } from "react-icons/bs";
+import { TbBrandLeetcode } from "react-icons/tb";
 import Toggle from "./Toggle";
 import Link from "next/link";
 
@@ -80,6 +81,9 @@ const Sidebar = () => {
         </Link>
         <Link href="https://instagram.com/sahil_tambe_96k_/" target={"_blank"}>
           <BsInstagram className="links text-red-600" />
+        </Link>
+        <Link href="https://leetcode.com/sahil18_/" target={"_blank"}>
+          <TbBrandLeetcode className="links w-14 text-yellow-500" />
         </Link>
       </div>
     </div>
