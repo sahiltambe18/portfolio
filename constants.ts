@@ -1,16 +1,21 @@
 import { IconType } from "react-icons/lib"
 import { RiComputerLine } from 'react-icons/ri';
-import { FaServer, FaCode, FaMountain, FaBrain, FaReact, FaNodeJs, FaPython, FaJava, FaDatabase, FaUbuntu } from 'react-icons/fa';
+import { FaServer, FaCode, FaMountain, FaBrain, FaReact, FaNodeJs, FaPython, FaJava, FaDatabase, FaUbuntu, FaChrome, FaGithub, FaDocker } from 'react-icons/fa';
 import { AiFillApi } from 'react-icons/ai';
-import { GiBiceps } from 'react-icons/gi';
+import { GrDeploy, GrGraphQl, GrServices } from "react-icons/gr";
+import { GiBiceps, GiOctopus } from 'react-icons/gi';
 import { TbBrandCpp, TbBrandTailwind, TbBrandNextjs } from 'react-icons/tb';
 import { IoLogoJavascript } from "react-icons/io";
-import { SiExpress , SiScikitlearn , SiTypescript } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { SiAmazonapigateway, SiExpress , SiJest, SiJsonwebtokens, SiLangchain, SiMui, SiNginx, SiNumpy, SiPandas, SiPostman, SiPrisma, SiRabbitmq, SiRedis, SiScikitlearn , SiTrpc, SiTypescript } from "react-icons/si";
+import {  BiLogoPostgresql } from "react-icons/bi";
+import { IoIdCardOutline, IoInfinite } from "react-icons/io5";
+import { MdOutlineSecurity } from "react-icons/md";
+import { FaGolang } from "react-icons/fa6";
 
 
 
-const links = [{ path: '/', title: "About" }, { path: '/resume', title: "Resume" }, { path: '/projects', title: "Projects" }]
+const links = [{ path: '/', title: "About" },{ path: "/experience", title: "Experience" }, { path: '/resume', title: "Resume" }, { path: '/projects', title: "Projects" }
+]
 
 interface domain {
     title: string,
@@ -28,6 +33,11 @@ const domains: domain[] = [
         title: "Back-end Development",
         data: "Can handle database, server, api using Express & NodeJS",
         icon: FaServer
+    },
+    {
+        title: "DevOps",
+        data: "I can handle DevOps and microservice architecture",
+        icon: IoInfinite
     },
     {
         title: "Api Development",
@@ -56,88 +66,9 @@ const domains: domain[] = [
     },
 ]
 
-interface skill {
-    name: string,
-    level: string,
-    icon: IconType
-}
-
-const skills: skill[] = [
-    {
-        name: "ReactJS",
-        level: "90%",
-        icon: FaReact
-    },
-    {
-        name: "JavaScript",
-        level: "90%",
-        icon: IoLogoJavascript
-    },
-    {
-        name: "TypeScript",
-        level: "90%",
-        icon: SiTypescript
-    },
-    {
-        name: "NodeJS",
-        level: "85%",
-        icon: FaNodeJs
-    },
-    {
-        name: "ExpressJS",
-        level: "85%",
-        icon: SiExpress
-    },
-    {
-        name: "Python",
-        level: "80%",
-        icon: FaPython
-    },
-    {
-        name: "Scikit-Learn",
-        level: "70%",
-        icon: SiScikitlearn
-    },
-    {
-        name: "JAVA",
-        level: "85%",
-        icon: FaJava
-    },
-    {
-        name: "C++",
-        level: "90%",
-        icon: TbBrandCpp
-    },
-    {
-        name: "NEXTJS",
-        level: "85%",
-        icon: TbBrandNextjs
-    },
-    {
-        name: "Postgresql",
-        level: "75%",
-        icon: BiLogoPostgresql
-    },
-    {
-        name: "MongoDB",
-        level: "80%",
-        icon: FaDatabase
-    },
-    {
-        name: "Tailwind CSS",
-        level: "90%",
-        icon: TbBrandTailwind
-    },
-    {
-        name: "Ubuntu",
-        level: "70%",
-        icon: FaUbuntu
-    },
-]
-
-const data = `I am an IT engineering student at International Institute of Information Technology, Pune with an insatiable curiosity for software and technology. 
-My strengths lie in problem-solving and optimization, skills I've honed while delving into C++.
-My journey has led me to the captivating realm of machine learning, where I'm actively acquiring skills and exploring its applications. Eager to contribute and grow in the tech world`
+const data = `I am a Software Engineer with a Bachelor's in Information Technology from International Institute of Information Technology, Pune, graduated with a CGPA of 8.39.
+Alongside my engineering projects, I’ve explored AI/ML fundamentals and continue to deepen my understanding in this space. 
+Beyond coding, I enjoy problem-solving with C++, participating in hackathons, gym workouts, and trekking to reconnect with nature. Always eager to build impactful solutions and grow in the tech ecosystem.`;
 
 interface Project {
     name: string;
@@ -210,5 +141,141 @@ const projects : Project[] =[
 
 const resumeDoc = 'https://sahil-static.netlify.app/Images/sahil_tambe.pdf'
 
-export { links, domains, data, skills  ,projects , resumeDoc};
-export type { skill  , Project};
+
+
+export const allSkills = {
+  "Frontend": [
+    { name: "ReactJS", level: "90%", icon: FaReact },
+    { name: "Next.js", level: "85%", icon: TbBrandNextjs },
+    { name: "JavaScript", level: "90%", icon: IoLogoJavascript },
+    { name: "TypeScript", level: "90%", icon: SiTypescript },
+    { name: "Tailwind CSS", level: "90%", icon: TbBrandTailwind },
+    { name: "Material UI (MUI)", level: "85%", icon: SiMui },
+  ],
+  "Backend": [
+    { name: "Node.js", level: "85%", icon: FaNodeJs },
+    { name: "Express.js", level: "85%", icon: SiExpress },
+    { name: "PostgreSQL", level: "75%", icon: BiLogoPostgresql },
+    { name: "MongoDB", level: "80%", icon: FaDatabase },
+    { name: "GraphQL", level: "70%", icon: GrGraphQl },
+    { name: "REST APIs", level: "90%", icon: RiComputerLine },
+    { name: "tRPC", level: "75%", icon: SiTrpc },
+    { name: "ORM", level: "75%", icon: SiPrisma },
+    
+
+  ],
+  "AI / ML": [
+    { name: "Python", level: "80%", icon: FaPython },
+    { name: "Scikit-learn", level: "70%", icon: SiScikitlearn },
+    { name: "Google GenAI", level: "60%", icon: FaBrain },
+    { name: "LangChain", level: "60%", icon: SiLangchain },
+    { name: "Numpy", level: "75%", icon: SiNumpy },
+    { name: "Pandas", level: "75%", icon: SiPandas}
+  ],
+  "Languages": [
+    { name: "C++", level: "90%", icon: TbBrandCpp },
+    { name: "Java", level: "85%", icon: FaJava },
+    { name: "Python", level: "80%", icon: FaPython },
+    { name: "Go", level: "80%", icon: FaGolang },
+    { name: "JavaScript", level: "90%", icon: IoLogoJavascript },
+    { name: "TypeScript", level: "90%", icon: SiTypescript },
+  ],
+  "DevOps & Tools": [
+    { name: "Docker", level: "70%", icon: FaDocker },
+    { name: "Ubuntu/Linux", level: "70%", icon: FaUbuntu },
+    { name: "Git / GitHub", level: "90%", icon: FaGithub },
+    
+    { name: "Postman", level: "85%", icon: SiPostman },
+    { name: "Chrome DevTools", level: "85%", icon: FaChrome },
+  ],
+  "Auth & Security": [
+    { name: "Ory Kratos", level: "75%", icon: MdOutlineSecurity },
+    { name: "OAuth2 / OIDC", level: "70%", icon: IoIdCardOutline },
+    { name: "JWT", level: "85%", icon: SiJsonwebtokens },
+    // { name: "Passkeys / WebAuthn", level: "65%", icon: undefined }
+  ],
+  "Infra / Architecture": [
+    { name: "Microservices", level: "80%", icon: GrServices },
+    { name: "API Gateway (Kong)", level: "75%", icon: SiAmazonapigateway },
+    { name: "CI/CD (GitHub Actions)", level: "70%", icon: GrDeploy },
+    { name: "Nginx", level: "70%", icon: SiNginx },
+    { name: "Redis", level: "80%", icon: SiRedis },
+    { name: "RabbitMQ", level: "75%", icon: SiRabbitmq },
+  ],
+  "Testing / Quality": [
+    { name: "Jest", level: "80%", icon: SiJest },
+    { name: "React Testing Library", level: "75%", icon: GiOctopus }
+  ],
+//   "Softwares / Misc": [
+//     { name: "Figma", level: "70%", icon: undefined },
+//     // { name: "Notion", level: "90%", icon: undefined },
+//     { name: "VS Code", level: "95%", icon: undefined },
+//     { name: "Slack", level: "90%", icon: undefined }
+//   ]
+};
+
+
+
+export const groupedExperience = [
+  {
+    org: "Integral Development Corp.",
+    
+    totalDuration: "Apr 2025 – Present · ongoing",
+    roles: [
+      {
+        title: "Software Engineer",
+        type: "Full-time",
+        period: "Jul 2025 – Present",
+        duration: "Ongoing"
+      },
+      {
+        title: "Full-Stack Developer Intern",
+        type: "Internship",
+        period: "Apr 2025 – Jul 2025",
+        duration: "4 mos",
+        description: "Integrating secure features like auth, passkey login, GraphQL APIs, UI screens, and system monitoring scripts with Alertmanager and Cronicle."
+      }
+    ]
+  },
+  {
+    org: "Sociante",
+    totalDuration: "Oct 2024 – Mar 2025 · 6 mos",
+    roles: [
+      {
+        title: "Project Intern",
+        type: "Internship",
+        period: "Oct 2024 – Mar 2025",
+        duration: "6 mos",
+        description: "Led team and developed modules in user management, transactions, and parking system with Node.js and RabbitMQ."
+      }
+    ]
+  },
+  {
+    org: "Marketifyall",
+    totalDuration: "Nov 2023 – Dec 2023 · 1 mo",
+    roles: [
+      {
+        title: "Frontend Intern",
+        type: "Internship",
+        period: "Nov 2023 – Dec 2023",
+        duration: "1 mo",
+        description: "Worked on React UI components and dashboards using Tailwind CSS."
+      }
+    ]
+  }
+]
+
+export const volunteeringExperience = [
+  {
+    role: "Web Dev Lead",
+    org: "GDSC I2IT",
+    period: "Jul 2023 – May 2024",
+    duration: "11 mos",
+    description: "Led GDSC I2IT's web team, conducted MERN bootcamps, and mentored students."
+  }
+]
+
+
+
+export { links, domains, data ,projects , resumeDoc};
+export type {  Project};
