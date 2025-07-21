@@ -155,12 +155,12 @@ export const allSkills = {
   "Backend": [
     { name: "Node.js", level: "85%", icon: FaNodeJs },
     { name: "Express.js", level: "85%", icon: SiExpress },
-    { name: "PostgreSQL", level: "75%", icon: BiLogoPostgresql },
+    { name: "PostgreSQL", level: "85%", icon: BiLogoPostgresql },
     { name: "MongoDB", level: "80%", icon: FaDatabase },
-    { name: "GraphQL", level: "70%", icon: GrGraphQl },
+    { name: "GraphQL", level: "90%", icon: GrGraphQl },
     { name: "REST APIs", level: "90%", icon: RiComputerLine },
-    { name: "tRPC", level: "75%", icon: SiTrpc },
-    { name: "ORM", level: "75%", icon: SiPrisma },
+    { name: "tRPC", level: "80%", icon: SiTrpc },
+    { name: "ORM", level: "90%", icon: SiPrisma },
     
 
   ],
@@ -181,30 +181,30 @@ export const allSkills = {
     { name: "TypeScript", level: "90%", icon: SiTypescript },
   ],
   "DevOps & Tools": [
-    { name: "Docker", level: "70%", icon: FaDocker },
-    { name: "Ubuntu/Linux", level: "70%", icon: FaUbuntu },
+    { name: "Docker", level: "85%", icon: FaDocker },
+    { name: "Ubuntu/Linux", level: "85%", icon: FaUbuntu },
     { name: "Git / GitHub", level: "90%", icon: FaGithub },
     
     { name: "Postman", level: "85%", icon: SiPostman },
     { name: "Chrome DevTools", level: "85%", icon: FaChrome },
   ],
   "Auth & Security": [
-    { name: "Ory Kratos", level: "75%", icon: MdOutlineSecurity },
-    { name: "OAuth2 / OIDC", level: "70%", icon: IoIdCardOutline },
+    { name: "Ory Kratos", level: "85%", icon: MdOutlineSecurity },
+    { name: "OAuth2 / OIDC", level: "80%", icon: IoIdCardOutline },
     { name: "JWT", level: "85%", icon: SiJsonwebtokens },
     // { name: "Passkeys / WebAuthn", level: "65%", icon: undefined }
   ],
   "Infra / Architecture": [
-    { name: "Microservices", level: "80%", icon: GrServices },
-    { name: "API Gateway (Kong)", level: "75%", icon: SiAmazonapigateway },
-    { name: "CI/CD (GitHub Actions)", level: "70%", icon: GrDeploy },
-    { name: "Nginx", level: "70%", icon: SiNginx },
-    { name: "Redis", level: "80%", icon: SiRedis },
-    { name: "RabbitMQ", level: "75%", icon: SiRabbitmq },
+    { name: "Microservices", level: "90%", icon: GrServices },
+    { name: "API Gateway (Kong)", level: "80%", icon: SiAmazonapigateway },
+    { name: "CI/CD (GitHub Actions)", level: "80%", icon: GrDeploy },
+    { name: "Nginx", level: "80%", icon: SiNginx },
+    { name: "Caching", level: "80%", icon: SiRedis },
+    { name: "RabbitMQ", level: "80%", icon: SiRabbitmq },
   ],
   "Testing / Quality": [
-    { name: "Jest", level: "80%", icon: SiJest },
-    { name: "React Testing Library", level: "75%", icon: GiOctopus }
+    { name: "Jest", level: "90%", icon: SiJest },
+    { name: "React Testing Library", level: "85%", icon: GiOctopus }
   ],
 //   "Softwares / Misc": [
 //     { name: "Figma", level: "70%", icon: undefined },
